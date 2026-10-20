@@ -57,7 +57,7 @@ nav ul img{
     width: max-content;
 }
 .herosec {
-    background-image: url(/image/p1.png);
+    background-image:linear-gradient(rgba(20, 30, 50, 0.4), rgba(20, 30, 50, 0.4)), url("https://github.com/subhia1997g-ux/ELC/blob/main/image/p1.png?raw=true");
     background-size: 100% 100%;
     height: 250px;
     color: aliceblue;
@@ -537,3 +537,266 @@ nav ul img{
 
 
 
+
+
+/* =========================================================
+   Responsive adjustments for ELC
+   Added after reviewing the actual HTML structure.
+   Existing desktop styles above are retained and overridden
+   only where needed for smaller screens.
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Main navigation and hero: prevent fixed-width overflow */
+nav ul {
+    max-width: calc(100% - 32px);
+}
+
+.container {
+    width: calc(100% - 32px);
+    max-width: 1330px;
+}
+
+.herosec {
+    width: 100%;
+    min-width: 0;
+    min-height: 250px;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    overflow-wrap: anywhere;
+}
+
+.container img {
+    width: min(600px, 100%);
+    height: auto;
+}
+
+.service {
+    width: min(90%, 1400px);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#f2f.service-details-page {
+    width: calc(100% - 32px);
+    box-sizing: border-box;
+}
+
+/* Laptop and tablet */
+@media (max-width: 1100px) {
+    nav ul {
+        width: calc(100% - 32px);
+        height: auto;
+        margin: 16px auto;
+        padding: 12px 16px;
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul a {
+        font-size: 20px;
+    }
+
+    .service {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 42px 16px;
+    }
+
+    #f2f.service-details-page {
+        max-width: 850px;
+        padding: 32px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    nav ul {
+        width: calc(100% - 24px);
+        max-width: none;
+        margin: 12px auto;
+        padding: 12px;
+        gap: 12px 16px;
+        font-size: 16px;
+    }
+
+    nav ul img {
+        width: 70px;
+        height: auto;
+        max-height: 55px;
+        object-fit: contain;
+    }
+
+    nav ul a {
+        font-size: 16px;
+    }
+
+    .container {
+        width: calc(100% - 24px);
+        margin: 20px auto;
+        gap: 14px;
+    }
+
+    .herosec {
+        min-height: 220px;
+        padding: 18px 14px;
+        background-size: cover;
+    }
+
+    .herosec h1 {
+        font-size: clamp(1.35rem, 5vw, 1.9rem);
+        line-height: 1.5;
+    }
+
+    .herosec h2 {
+        font-size: clamp(0.95rem, 3.5vw, 1.15rem);
+        line-height: 1.7;
+    }
+
+    .about {
+        padding: 12px 16px;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .about h3 {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .service {
+        width: calc(100% - 24px);
+        padding: 30px 0;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .service .ser {
+        font-size: 1.8rem;
+        margin-bottom: 12px;
+    }
+
+    .card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .card-content {
+        min-width: 0;
+        padding: 18px 14px;
+    }
+
+    .card-content h2 {
+        font-size: 1rem;
+        overflow-wrap: anywhere;
+    }
+
+    .card-content .desc {
+        font-size: 0.88rem;
+        overflow-wrap: anywhere;
+    }
+
+    .card img {
+        width: 88px;
+        max-width: 30%;
+        max-height: 110px;
+        height: auto;
+        object-fit: contain;
+        margin-left: 10px;
+    }
+
+    #contact {
+        padding: 40px 16px;
+    }
+
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .icon-link-container {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .icon-link {
+        width: 50px;
+        height: 50px;
+    }
+
+    #f2f.service-details-page {
+        width: calc(100% - 24px);
+        margin: 24px auto;
+        padding: 22px 16px;
+    }
+
+    #f2f .page-header {
+        gap: 16px;
+    }
+
+    #f2f .page-header h1 {
+        font-size: 1.5rem;
+        overflow-wrap: anywhere;
+    }
+
+    #f2f .page-header img {
+        width: 90px;
+        height: 90px;
+    }
+
+    #f2f .page-content h2 {
+        font-size: 1.15rem;
+    }
+
+    #f2f .page-content p,
+    #f2f .page-content ul li {
+        font-size: 0.98rem;
+        overflow-wrap: anywhere;
+    }
+
+    #f2f .whatsapp-btn {
+        max-width: 100%;
+        padding: 10px 20px;
+    }
+}
+
+/* Very narrow phones */
+@media (max-width: 380px) {
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul a {
+        font-size: 15px;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card img {
+        width: 100px;
+        max-width: 100%;
+        max-height: 100px;
+        margin: 0 auto 12px;
+    }
+
+    .card-content {
+        padding: 16px;
+    }
+
+    #f2f.service-details-page {
+        padding: 18px 12px;
+    }
+}
